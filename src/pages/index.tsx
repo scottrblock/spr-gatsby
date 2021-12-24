@@ -435,11 +435,14 @@ const IndexPage = () => {
           <p>this site is built with React.js and heavily utilizes SVGs</p>
           <p>you might notice there are some rounding errors</p>
           <p>
-            the source code is <a href="">available here</a>
+            the source code is{" "}
+            <a href="https://github.com/scottrblock/spr-gatsby">
+              available here
+            </a>
           </p>
           <p>
             for custom visualizations or advertising, please{" "}
-            <a href="">get in touch</a>
+            <a href="mailto:hello@stacktopotratio.com">get in touch</a>
           </p>
         </div>
       </footer>
