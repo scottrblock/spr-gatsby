@@ -65,7 +65,7 @@ const Seo = ({
         },
         {
           name: `twitter:image`,
-          content: `https://www.phonetonote.com/images/twitter-image.png`,
+          content: `https://stacktopotratio.com/images/twitter-image.png`,
         },
         {
           name: `twitter:title`,
