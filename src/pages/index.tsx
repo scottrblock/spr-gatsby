@@ -456,7 +456,10 @@ const IndexPage = () => {
       </main>
       <footer>
         <div>
-          <p>this site is built with React.js and heavily utilizes SVGs</p>
+          <p>
+            this site is built with typescript on React.js and served with
+            Gatsby.js. the visualizations are SVGs.
+          </p>
           <p>you might notice there are some rounding errors</p>
           <p>
             the source code is{" "}
