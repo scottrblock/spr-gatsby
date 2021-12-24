@@ -1,0 +1,288 @@
+body {
+  padding: 20px 5vh;
+  font-size: 15px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+header {
+  margin-bottom: 15px;
+  color: #aa8eb3;
+
+  h1 {
+    font-weight: 300;
+    font-size: 18px;
+    text-shadow: 4px 4px 6px lightsalmon;
+  }
+}
+
+footer {
+  border-top: 1px solid #ccc;
+
+  a {
+    color: #3975d1;
+  }
+}
+
+.row {
+  margin-bottom: 10px;
+
+  &.no-mb {
+    margin-bottom: 30px;
+  }
+}
+
+button {
+  background-color: #ffffff;
+  border: 1px solid #333;
+  color: #333;
+  padding: 8px 16px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 6px;
+  margin-bottom: 16px;
+  box-shadow: #ffdecfe0 4px 3px 0px 0px;
+  cursor: pointer;
+
+  &:hover {
+    background-color: #eee;
+  }
+
+  &:active {
+    background-color: #ddd;
+  }
+}
+
+input[type="number"] {
+  border: 0;
+  border-bottom: 3px dashed #e2e2e2;
+  font-size: 13px;
+  font-weight: 600;
+  font-style: italic;
+  color: #bbb;
+  text-align: center;
+  margin: 0 5px;
+  width: 50px;
+}
+
+.donutchart-innertext-value {
+  color: #aaa;
+  font-weight: 900;
+  text-decoration: none;
+  background: linear-gradient(90deg, #c5e0e240, #8c47472b);
+  padding: 4px;
+  margin: 0 8px;
+  border-radius: 20%;
+  box-shadow: 2px 3px 5px 1px #00008b30;
+}
+
+.display-text {
+  font-weight: 600;
+  border-bottom: 6px solid;
+}
+
+.top-cols {
+  display: flex;
+  justify-content: space-between;
+  overflow-x: scroll;
+  margin-bottom: 0px;
+
+  @media screen and (max-width: 600px) {
+    margin: 0 -10px;
+  }
+}
+
+.top-col-left {
+  @media screen and (max-width: 600px) {
+    font-size: 12px;
+    margin: 0 -65px 0 0;
+  }
+}
+
+.bottom-cols {
+  display: flex;
+  width: 100%;
+  margin-top: 30px;
+
+  @media screen and (max-width: 900px) {
+    flex-direction: column;
+    margin-top: 12px;
+  }
+
+  .bottom-col-left {
+    font-size: 15px;
+    width: 450px;
+
+    @media screen and (max-width: 900px) {
+      width: 360px;
+      font-size: 12px;
+      margin: 0 -10px 12px -10px;
+    }
+  }
+
+  .bottom-col-right {
+    flex-grow: 2;
+  }
+
+  .left-words {
+    display: inline-block;
+    width: 120px;
+    text-align: right;
+
+    @media screen and (max-width: 900px) {
+      width: auto;
+    }
+  }
+}
+
+.d-chart-arcs-path {
+  opacity: 1 !important;
+}
+
+.pre-flop.d-chart-arcs-path {
+  fill: url("#preflopGradient");
+}
+
+.flop-bet.d-chart-arcs-path {
+  fill: url("#flopBetGradient");
+}
+
+.flop-call.d-chart-arcs-path {
+  fill: url("#flopCallGradient");
+}
+
+.turn-bet.d-chart-arcs-path {
+  fill: url("#turnBetGradient");
+}
+
+.turn-call.d-chart-arcs-path {
+  fill: url("#turnCallGradient");
+}
+
+.river-bet.d-chart-arcs-path {
+  fill: url("#riverBetGradient");
+}
+
+.river-call.d-chart-arcs-path {
+  fill: url("#riverCallGradient");
+}
+
+.d-chart-legend-item-rect {
+  opacity: 1 !important;
+}
+
+.d-chart-legend-item {
+  fill: #666;
+}
+
+.d-chart-innertext {
+  display: none !important;
+}
+
+.donut-rings {
+  display: flex;
+}
+
+.donut-ring-top {
+  color: #666;
+  height: 200px;
+}
+
+.donut-ring-bottom {
+  display: flex;
+  justify-content: center;
+  color: #666;
+}
+
+.donut-ring-bottom {
+  flex-direction: column;
+  align-items: center;
+  font-style: italic;
+  color: #aaa;
+  font-size: 15px;
+  margin-top: -25px;
+  margin-bottom: 10px;
+
+  div {
+    margin-bottom: 0;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.donut-ring-top table {
+  position: relative;
+  top: -130px;
+  left: 45px;
+  border-collapse: collapse;
+  font-size: 12px;
+
+  tr {
+    border-bottom: 1px solid #ddd;
+
+    &:last-child {
+      border-bottom: 0;
+    }
+
+    td {
+      border-right: 1px solid #ddd;
+      padding: 4px;
+      min-width: 30px;
+
+      &:first-child {
+        color: #999;
+      }
+
+      &:last-child {
+        color: #666;
+        border-right: 0;
+        text-align: right;
+      }
+    }
+  }
+}
+
+.bottom-col svg {
+  max-height: 500px;
+}
+
+.radio-title {
+  margin-bottom: 10px;
+}
+
+.top-container {
+  display: flex;
+
+  @media screen and (max-width: 900px) {
+    flex-direction: column;
+  }
+}
+
+.radio {
+  background-color: #eee;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 10px;
+  margin: 20px 20px 50px 0;
+
+  @media screen and (max-width: 900px) {
+    width: 200px;
+    margin: 0 0 12px 0;
+  }
+
+  label {
+    display: block;
+
+    &:hover,
+    &:active {
+      text-decoration: underline;
+    }
+
+    input {
+      margin: 3px 7px 5px 5px;
+    }
+  }
+}
