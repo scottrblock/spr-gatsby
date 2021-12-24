@@ -299,6 +299,7 @@ const IndexPage = () => {
                 are
               </div>
               <input
+                id="starting-stack"
                 type="number"
                 min={10}
                 max={1000}
@@ -307,7 +308,7 @@ const IndexPage = () => {
                 onFocus={(e) => mixpanel?.track("changeStartingStack")}
                 onChange={(e) => setStartingStack(parseInt(e.target.value))}
               />
-              bb effective
+              <label htmlFor="starting-stack">bb effective</label>
             </div>
             <div className="row">
               <div className="left-words">
@@ -317,6 +318,7 @@ const IndexPage = () => {
                 </span>
               </div>
               <input
+                id="raise-size"
                 type="number"
                 value={raiseSize}
                 min={2}
@@ -325,14 +327,19 @@ const IndexPage = () => {
                 onFocus={(e) => mixpanel?.track("changeRaiseSize")}
                 onChange={(e) => setRaiseSize(parseFloat(e.target.value))}
               />
-              <span className="display-text" style={bbStyles.Preflop?.css}>
+              <label
+                htmlFor="raise-size"
+                className="display-text"
+                style={bbStyles.Preflop?.css}
+              >
                 bb and get called preflop
-              </span>
+              </label>
             </div>
             {showThrough >= 1 && (
               <div className="row">
                 <div className="left-words">you bet</div>
                 <input
+                  id="flop-bet-percentage"
                   type="number"
                   value={flopBetPercentage}
                   min={minFlopBet}
@@ -343,14 +350,19 @@ const IndexPage = () => {
                     setFlopBetPercentage(parseInt(e.target.value))
                   }
                 />
-                % pot{" "}
-                <span style={bbStyles["FlopBet"]?.css} className="display-text">
-                  on the flop
-                </span>{" "}
-                and{" "}
-                <span style={bbStyles.FlopCall?.css} className="display-text">
-                  get called
-                </span>
+                <label htmlFor="flop-bet-percentage">
+                  % pot{" "}
+                  <span
+                    style={bbStyles["FlopBet"]?.css}
+                    className="display-text"
+                  >
+                    on the flop
+                  </span>{" "}
+                  and{" "}
+                  <span style={bbStyles.FlopCall?.css} className="display-text">
+                    get called
+                  </span>
+                </label>
               </div>
             )}
 
@@ -358,6 +370,7 @@ const IndexPage = () => {
               <div className="row">
                 <div className="left-words">you bet</div>
                 <input
+                  id="turn-bet-percentage"
                   type="number"
                   value={turnBetPercentage}
                   min={minTurnBet}
@@ -368,20 +381,26 @@ const IndexPage = () => {
                     setTurnBetPercentage(parseInt(e.target.value))
                   }
                 />
-                % pot{" "}
-                <span style={bbStyles["TurnBet"]?.css} className="display-text">
-                  on the turn
-                </span>{" "}
-                and{" "}
-                <span style={bbStyles.TurnCall?.css} className="display-text">
-                  get called
-                </span>
+                <label htmlFor="turn-bet-percentage">
+                  % pot{" "}
+                  <span
+                    style={bbStyles["TurnBet"]?.css}
+                    className="display-text"
+                  >
+                    on the turn
+                  </span>{" "}
+                  and{" "}
+                  <span style={bbStyles.TurnCall?.css} className="display-text">
+                    get called
+                  </span>
+                </label>
               </div>
             )}
             {showThrough >= 3 && (
               <div className="row">
                 <div className="left-words">you bet</div>
                 <input
+                  id="river-bet-percentage"
                   type="number"
                   value={riverBetPercentage}
                   min={minRiverBet}
@@ -392,14 +411,19 @@ const IndexPage = () => {
                     setRiverBetPercentage(parseInt(e.target.value))
                   }
                 />
-                % pot{" "}
-                <span style={bbStyles.RiverBet?.css} className="display-text">
-                  on the river
-                </span>{" "}
-                and{" "}
-                <span style={bbStyles.RiverCall?.css} className="display-text">
-                  get called
-                </span>
+                <label htmlFor="river-bet-percentage">
+                  % pot{" "}
+                  <span style={bbStyles.RiverBet?.css} className="display-text">
+                    on the river
+                  </span>{" "}
+                  and{" "}
+                  <span
+                    style={bbStyles.RiverCall?.css}
+                    className="display-text"
+                  >
+                    get called
+                  </span>
+                </label>
               </div>
             )}
           </div>
