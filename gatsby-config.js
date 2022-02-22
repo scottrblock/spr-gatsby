@@ -19,8 +19,7 @@ module.exports = {
       options: {
         apiToken: "3fbc91572f4492c1c003eb48f5074af8",
         enableOnDevMode: false,
-        pageViews: "all",
-        trackPageViewsAs: "myPageView",
+        pageViews: null,
       },
     },
     {
